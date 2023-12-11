@@ -126,6 +126,7 @@ for company in company_list:
 df = pd.DataFrame(totals)
 
 # 엑셀 파일로 저장
+# 실제로는 이 파일을 사용하지 않고 위에서 700번째로 저장된 파일을 사용하였습니다.
 df.to_excel('jobplanet_data.xlsx', index=False)
 
 # 셀레니움 드라이버 종료

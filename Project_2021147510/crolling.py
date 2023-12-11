@@ -99,9 +99,9 @@ for company in company_list:
             '#sideContents > div:nth-child(3) > div > div:nth-child(2) > div.num > em').text
         out_num = soup.select_one(
             '#sideContents > div:nth-child(3) > div > div:nth-child(3) > div.num > em').text
-        if (count % 10 == 0):
+        if (count % 100 == 0):
             df2 = pd.DataFrame(totals)
-            df2.to_excel('testjobPlanetData'+str(count)+'.xlsx')
+            df2.to_excel('jobPlanetData'+str(count)+'.xlsx')
             print(str(count)+'th data 파일이 저장되었습니다!')
 
     # 혹시나 특정 회사에 해당 정보가 없어서 에러가 나는 경우 처리를 하기 위한 except문
@@ -112,7 +112,7 @@ for company in company_list:
         in_num = 'no info'
         out_num = 'no info'
 
-        if (count % 10 == 0):
+        if (count % 100 == 0):
             df2 = pd.DataFrame(totals)
             df2.to_excel('jobPlanetData'+str(count)+'.xlsx')
             print(str(count)+'th data 파일이 저장되었습니다!')

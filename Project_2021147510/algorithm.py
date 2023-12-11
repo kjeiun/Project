@@ -6,6 +6,9 @@ import seaborn as sns  # heatmap 만들기 위한 라이브러리
 import matplotlib.font_manager as fm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
+
+# plt부분에서 폰트 설정해주셔야 오류 안납니다!!
+
 # 데이터 불러오기
 company_data = pd.read_excel("after_preprocess.xlsx")
 cause_data = company_data.drop(['복지 및 급여'], axis=1)
